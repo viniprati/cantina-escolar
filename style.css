@@ -3,6 +3,20 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    background: url('https://images.sympla.com.br/64359beac6eeb.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.6;
+    z-index: -1;
 }
 
 header {
@@ -34,8 +48,10 @@ nav ul li a {
 section {
     padding: 20px;
     margin: 20px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.3); /* Transparência aplicada apenas nas seções */
     border-radius: 8px;
+    position: relative;
+    z-index: 1;
 }
 
 #welcome {
@@ -50,10 +66,50 @@ section {
 }
 
 .menu-item {
-    background-color: #ffcc99;
+    background-color: rgba(154, 154, 154, 0.6); /* Transparência aplicada nos itens do menu */
     padding: 15px;
     border-radius: 8px;
     text-align: center;
+    position: relative;
+}
+
+.menu-item img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.menu-item h3 {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.menu-item ul {
+    list-style: none;
+    padding: 0;
+    color: #fff;
+}
+
+.menu-item p {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #fff;
+}
+
+.btn-pagar {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-pagar:hover {
+    background-color: #0056b3;
 }
 
 footer {
